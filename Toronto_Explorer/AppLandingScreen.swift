@@ -58,24 +58,23 @@ struct AppLandingScreen: View {
                         color: .white
                     )
                     .padding(.top, 20)
-                    .padding(.horizontal, 120)
                     
                     //MARK: - Navigation Link to UserSignIn Screen with animation
                     NavigationLink(destination: UserSignInScreen().navigationBarHidden(true)) {
                         FadeInTextAnimationDesign(
-                            text: "Next",
+                            text: "Get Started",
                             delay: 1.5,
-                            font: .subheadline,
+                            font: .custom("Satisfy-Regular", size: 20),
                             color: .white,
                             fontWeight: .bold
                         )
                         .padding(.horizontal, 60)
-                        .padding(.vertical, 15)
+                        .padding(.vertical, 10)
                         .background(Color(.blue))
                         .cornerRadius(50)
                         
                     }
-                    .padding(.top, 20)
+                    .padding(.top, 50)
                     .opacity(isVisible ? 1 : 0)
                     .onAppear {
                         withAnimation(.easeIn(duration: 1).delay(1.5)) {
@@ -84,6 +83,7 @@ struct AppLandingScreen: View {
                     }
                 }
                 .padding()
+                .padding(.horizontal, 110)
             }
         }
     }
